@@ -20,7 +20,7 @@ const Contact = () => {
               <BrandLinkedin className="mr-2 text-blue-700" />
               <div>LinkedIn Profile</div>
             </div>
-            <div className="text-blue-700 hover:mouse-pointer">
+            <div className="text-blue-700 hover:mouse-pointer underline">
               <a
                 href="https://www.linkedin.com/in/rei-ashimi-01777820a/"
                 target="_blank"

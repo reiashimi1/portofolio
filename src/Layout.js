@@ -51,9 +51,9 @@ const Layout = ({ children }) => {
             <Menu iconShape="square">
               <MenuItem
                 icon={<LayoutList />}
-                active={location.pathname === "/"}
+                active={location.pathname === "/portofolio"}
               >
-                <Link to="/">Home</Link>
+                <Link to="/portofolio">Home</Link>
               </MenuItem>
               <MenuItem
                 icon={<Books />}
