@@ -20,9 +20,12 @@ import "react-pro-sidebar/dist/css/styles.css";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import stars from "./images/stars.jpg";
+import useWindowDimensions from "./hooks/useWindowDimensions";
+import { useEffect } from "react";
 
 const Layout = ({ children }) => {
   const [menuCollapse, setMenuCollapse] = useState(false);
+  const { width } = useWindowDimensions();
 
   const location = useLocation();
 
@@ -30,9 +33,15 @@ const Layout = ({ children }) => {
     menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
   };
 
+  useEffect(() => {
+    if (width < 768) {
+      setMenuCollapse(true);
+    }
+  }, [width]);
+
   return (
-    <div className="flex">
-      <div className="h-screen font-bold">
+    <div className="flex h-full bg-gray-300">
+      <div className="font-bold h-auto">
         <ProSidebar collapsed={menuCollapse} width={200} image={stars}>
           <SidebarHeader>
             <div
@@ -51,42 +60,92 @@ const Layout = ({ children }) => {
             <Menu iconShape="square">
               <MenuItem
                 icon={<LayoutList />}
-                active={location.pathname === "/portofolio"}
+                active={location.pathname === "/"}
               >
-                <Link to="/portofolio">Home</Link>
+                <Link to="/">
+                  <div
+                    className={`${
+                      location.pathname === "/" ? "text-indigo-500" : ""
+                    }`}
+                  >
+                    HOME
+                  </div>
+                </Link>
               </MenuItem>
               <MenuItem
                 icon={<Books />}
                 active={location.pathname === "/education"}
               >
-                <Link to="/education">Education</Link>
+                <Link to="/education">
+                  <div
+                    className={`${
+                      location.pathname === "/education"
+                        ? "text-indigo-500"
+                        : ""
+                    }`}
+                  >
+                    EDUCATION
+                  </div>
+                </Link>
               </MenuItem>
               <MenuItem
                 icon={<Mountain />}
                 active={location.pathname === "/experience"}
               >
-                <Link to="/experience">Experience</Link>
+                <Link to="/experience">
+                  <div
+                    className={`${
+                      location.pathname === "/experience"
+                        ? "text-indigo-500"
+                        : ""
+                    }`}
+                  >
+                    EXPERIENCE
+                  </div>
+                </Link>
               </MenuItem>
               <MenuItem
                 icon={<Wall />}
                 active={location.pathname === "/skills"}
               >
-                <Link to="/skills">Skills</Link>
+                <Link to="/skills">
+                  <div
+                    className={`${
+                      location.pathname === "/skills" ? "text-indigo-500" : ""
+                    }`}
+                  >
+                    SKILLS
+                  </div>
+                </Link>
               </MenuItem>
               <MenuItem
                 icon={<PhoneCall />}
                 active={location.pathname === "/contact"}
               >
-                <Link to="/contact">Contact me</Link>
+                <Link to="/contact">
+                  <div
+                    className={`${
+                      location.pathname === "/contact" ? "text-indigo-500" : ""
+                    }`}
+                  >
+                    CONTACT ME
+                  </div>
+                </Link>
               </MenuItem>
             </Menu>
           </SidebarContent>
           <SidebarFooter>
-            <div className="py-5 flex justify-center">Copyright @2022</div>
+            <div
+              className={`py-5 flex justify-center ${
+                menuCollapse ? "" : "border border-gray-500"
+              }`}
+            >
+              Copyright @2022
+            </div>
           </SidebarFooter>
         </ProSidebar>
       </div>
-      <div className="bg-gray-200 w-screen p-5 font-mono">{children}</div>
+      <div className="w-screen h-screen">{children}</div>
     </div>
   );
 };
