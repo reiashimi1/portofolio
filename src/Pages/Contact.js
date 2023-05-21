@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../Layout";
 import contact from "../images/contact.png";
-import { BrandGmail, BrandLinkedin, Location, Phone } from "tabler-icons-react";
+import { BrandGmail, BrandLinkedin, Location, Phone, BrandGithub } from "tabler-icons-react";
 
 const Contact = () => {
   return (
@@ -50,6 +50,21 @@ const Contact = () => {
                 <div>Phone Number</div>
               </div>
               <div className="text-blue-700">+355 67 54 49 040</div>
+            </div>
+            <div className="flex justify-between">
+              <div className="flex">
+                <BrandGithub className="mr-2 text-sky-700" />
+                <div>Github</div>
+              </div>
+              <div className="text-blue-700 hover:mouse-pointer underline">
+                <a
+                  href="https://github.com/reiashimi1"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Take a look
+                </a>
+              </div>            
             </div>
           </div>
           <img

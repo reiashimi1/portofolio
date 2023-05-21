@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../Layout";
 // import welcome from "../images/wlc.png";
 import profile from "../images/profile.jpg";
-import bg from "../images/background.png";
+// import bg from "../images/background.png";
 
 const style = {
   fontFamily: "Lucida Console",

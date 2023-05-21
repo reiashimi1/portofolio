@@ -34,15 +34,11 @@ const Education = () => {
               </div>
               <div className="flex">
                 <EyeCheck className="mr-2 text-green-500" />
-                <div>UDEMY: JavaScript (From zero te expert)</div>
+                <div>UDEMY: JavaScript, React, Node, TypeScript</div>
               </div>
               <div className="flex">
                 <EyeCheck className="mr-2 text-green-500" />
-                <div>UDEMY: React JS</div>
-              </div>
-              <div className="flex">
-                <EyeCheck className="mr-2 text-green-500" />
-                <div>UDEMY: Node JS</div>
+                <div>SALESFORCE: Deloitte Developer Intern</div>
               </div>
               <div className="flex">
                 <EyeCheck className="mr-2 text-green-500" />

@@ -140,7 +140,7 @@ const Layout = ({ children }) => {
                 menuCollapse ? "" : "border border-gray-500"
               }`}
             >
-              Copyright @2022
+              Copyright @2023
             </div>
           </SidebarFooter>
         </ProSidebar>
