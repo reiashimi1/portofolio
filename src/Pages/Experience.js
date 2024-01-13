@@ -26,9 +26,14 @@ const Experience = () => {
             <div className="italic">February 2022 - March 20222</div>
             <div className="flex pt-5">
               <Devices className="mr-2 text-sky-500" />
-              <div>Frontend Developer @ RPAY</div>
+              <div>Full-stack Developer @ RPAY</div>
             </div>
-            <div className="italic">April 2022 - Present</div>
+            <div className="italic">April 2022 - July 2023</div>
+            <div className="flex pt-5">
+              <Devices className="mr-2 text-sky-500" />
+              <div>Backend Developer @ BKT</div>
+            </div>
+            <div className="italic">September 2023 - Present</div>
           </div>
           <div>
             <img
