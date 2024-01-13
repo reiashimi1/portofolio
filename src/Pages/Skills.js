@@ -15,14 +15,19 @@ const Skills = () => {
   ];
 
   const hardSkillsArray = [
-    "React Js",
+    "React",
     "JavaScript",
     "TypeScript",
     "Next",
     "Java",
+    "SpringBoot"
     "Node",
+    "Nest",
     "SQL",
+    "PostgreSQL"
     "Git",
+    "GitHub",
+    "GitLab",
   ];
 
   return (
