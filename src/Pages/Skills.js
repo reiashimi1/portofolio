@@ -20,7 +20,7 @@ const Skills = () => {
     "TypeScript",
     "Next",
     "Java",
-    "SpringBoot"
+    "SpringBoot",
     "Node",
     "Nest",
     "SQL",
