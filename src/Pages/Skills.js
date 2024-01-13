@@ -24,7 +24,7 @@ const Skills = () => {
     "Node",
     "Nest",
     "SQL",
-    "PostgreSQL"
+    "PostgreSQL",
     "Git",
     "GitHub",
     "GitLab",
